@@ -1,0 +1,42 @@
+<header class="container-fluid bg-dark sticky-top">
+    <nav class="d-flex justify-content-between flex-column flex-sm-row flex-wrap justify-content-center align-items-center">
+        
+        <!-- Logo da cellep -->
+        <div>
+            <!-- <img src="https://br.cellep.com/ccxp20/wp-content/uploads/2020/11/Logo-CELLEP-1.png" alt="logo" class="w-50 p-2"> -->
+            <img src="./img/logo_branca.svg" alt="logo" class="w-50 p-2">
+           
+        </div>
+
+        <!-- lista horizontal - links de navegação das pagínas-->
+        <div>
+            <ul class="nav nav-pills">
+                <!-- BOTÃO HOME -->
+                <li>
+                    <a href="/" class="nav-link text-white" id="menuHome">Home</a>
+                </li>
+
+                <!-- BOTÃO NOTÍCIAS -->
+                <li>
+                    <a href="/noticias" class="nav-link text-white" id="menuHome">Notícias</a>
+                </li>
+
+                <!-- BOTÃO ADM -->
+                <li>
+                    <a href="/admin" class="nav-link text-white" id="menuHome">Admin</a>
+                </li>
+
+                <!-- BOTÃO SAIR -->
+                <li>
+                    <% if (typeof(autorizado) !== 'undefined') { %>
+                    
+                        <a href="/admin/sair" class="nav-link text-white">Sair</a>
+                        
+                    <% } %>
+                </li>
+            </ul>
+        </div>
+
+
+    </nav>
+</header>

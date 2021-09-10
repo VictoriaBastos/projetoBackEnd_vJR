@@ -1,0 +1,40 @@
+<!-- Criar o html aqui -->
+<%- include('../common/header') %>
+
+<%- include('../common/menu') %>
+
+
+<main class="mb-4">
+
+    <!-- Título da notícia-->
+    <div class="bg-light p-5 mb-4">
+        <div class="container text-center">
+            <h1> <%= noticia.titulo %> </h1>
+        </div>
+    </div>
+
+    <!-- Conteúdo da notícia -->
+    <div class="container">
+        <div class="row d-flex justify-content-center">
+            <div class="col-12 col-sm-10 col-md-8">
+                <p>
+                    <!-- Data da criação da notícia -->
+                    <small>
+                        <%= noticia.data_criacao.toLocaleString('pt-BR').split(' ').join(' às ') %>
+                    </small>
+                    <hr>
+                </p>
+                <!-- Conteúdo da notícia -->
+                <%= noticia.conteudo %>
+            </div>
+        </div>
+    </div>
+
+
+</main>
+
+
+
+
+<!-- Footer -->
+<%- include('../common/footer') %>
